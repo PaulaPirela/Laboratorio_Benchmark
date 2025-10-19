@@ -36,3 +36,14 @@ variable "data_size" {
   description = "Script initializer path"
   type        = string
 }
+
+variable "region" {
+  type    = string
+  default = "us-east-1"
+}
+
+variable "profile" {
+  type        = string
+  description = "Perfil de AWS CLI a usar"
+  default     = "papirelar"
+}

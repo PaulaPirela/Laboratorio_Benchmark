@@ -13,7 +13,7 @@ export PATH="$HOME/.local/bin:$PATH"
 source "$HOME"/.local/bin/env
 sudo apt update
 sudo apt install -y python3 python3-pip awscli
-pip3 install pandas
+pip3 install pandas duckdb
 
 # Descargamos el script de main.py para realizar el test
 aws s3 sync s3://$${BUCKET}/scripts/$${EXPERIMENT}/ /home/ubuntu/$${EXPERIMENT}/

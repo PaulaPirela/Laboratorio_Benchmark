@@ -61,13 +61,13 @@ resource "aws_vpc_security_group_egress_rule" "to_all" {
 
 
 resource "aws_iam_instance_profile" "this" {
-  name = "${var.prefix}-ec2-profile"
+  name = "${var.prefix}-ec2-profile-2"
   role = aws_iam_role.this.name
 }
 
 
 resource "aws_iam_role" "this" {
-  name = "${var.prefix}-ec2-role"
+  name = "${var.prefix}-ec2-role3-2"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -90,7 +90,7 @@ resource "aws_iam_role_policy_attachment" "s3_read_attach" {
 
 
 resource "aws_iam_policy" "s3_read" {
-  name        = "s3-read-policy-${var.prefix}"
+  name        = "s3-read-policy-${var.prefix}2"
   description = "Allows EC2 instances to read from specified S3 bucket"
 
   policy = jsonencode({
